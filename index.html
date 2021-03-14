@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+       
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            *{
+                margin: 0;
+                padding:0;
+            }
+            #map{
+                height: 500px;
+                width:1000px;
+            }
+           ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+        </style>
+        
+    </head>
+    <body>
+        <nav>
+            <ul style="float:left">
+                <li><a href="#GoogleMap"> GoogleMap</a></li>
+            </ul>
+            <ul>
+                <li><a href="index.html"> Home</a></li>
+                 <li><a href="newhtml.html"> Contact Us</a></li>
+            
+            </ul>
+        </nav>
+        <div id="map"></div>
+        <script>
+            function initMap(){
+                var location={lat:20.593683,lng:78.962883};
+                var map=new google.maps.Map(document.getElementById("map"),{
+                    zoom: 4,
+                    center: location, 
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjORPTwcrCNzv7ms6uLAJ5-dVdtNpRrgM&callback=initMap"></script>
+        
+    
+    </body>
+    
+    
+</html>
